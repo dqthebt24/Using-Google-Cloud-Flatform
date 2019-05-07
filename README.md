@@ -9,9 +9,16 @@ This document to show how to deploy a nodejs app using google cloud flatform
 - Step 2: Download and install Cloud SDK. 
 
     - To do download and install, following this [link](https://cloud.google.com/sdk/docs/)
-    - **Note**: If you already have the Cloud SDK installed, update it by running the following command:
+    - **Note**: 
     
-    > ```gcloud components update```
+        - If you already have the Cloud SDK installed, update it by running the following command:
+    
+            ```gcloud components update```
+    
+        - To create new configuration. Run this command: 
+    
+             ```gcloud init```
+    
 - Step 3: Create new project on cloud
 
     - Run this code to create: ```gcloud projects create [YOUR_PROJECT_NAME] --set-as-default```
@@ -32,6 +39,10 @@ This document to show how to deploy a nodejs app using google cloud flatform
 - Step 4: Initialize your App Engine app with your project and choose its region:
   
    - Run this code: ```gcloud app create --project=[YOUR_PROJECT_NAME]```
+   
+   - **Note**: If your project is already exist, you will get an message like this:
+   
+   > *ERROR: (gcloud.app.create) The project [your-project-name] already contains an App Engine application. You can deploy your application using `gcloud app deploy`.*
    
 - Step 5: Deploy 
 
